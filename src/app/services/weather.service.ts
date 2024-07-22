@@ -15,13 +15,8 @@ export class WeatherService {
 
   constructor(private http:HttpClient) { }
 
-  getweather(city:string):  Subject<Array<any>>{
-    const dataSubject = new Subject<Array<any>>();
-
-     this.http.get(`${this.baseURL}${city}&units=metric&APPID=${this.appID}`).subscribe((weather:any) => {
-      dataSubject.next(weather)
-    })
-    return dataSubject
+  getweather(city:string): Observable<any>{
+    return this.http.get(`${this.baseURL}${city}&units=metric&APPID=${this.appID}`).pipe((first()))
   }
 
   getForcast(city:string):  Subject<Array<any>> {

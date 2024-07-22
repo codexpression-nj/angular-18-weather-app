@@ -59,7 +59,7 @@ export class AppComponent implements OnInit{
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   const todayNumberInWeek = new Date().getDay();
-  this.weatherService.getweather('pretoria').pipe(first()).subscribe((play) => {
+  this.weatherService.getweather('pretoria').subscribe((play) => {
     console.log(play);
     
     this.cityName = play.name
