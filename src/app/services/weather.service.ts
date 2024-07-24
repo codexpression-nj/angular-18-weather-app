@@ -22,7 +22,7 @@ export class WeatherService {
   getForcast(city:string):  Subject<Array<any>> {
     const dataSubject = new Subject<Array<any>>();
     this.http.get(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${this.appID}`)
+      `${this.forcastURL}${city}&units=metric&APPID=${this.appID}`)
       .subscribe((weather: any) => {
         dataSubject.next(weather.list);
       });

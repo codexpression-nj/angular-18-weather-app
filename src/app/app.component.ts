@@ -52,7 +52,9 @@ export class AppComponent implements OnInit{
   sub5: Subscription | undefined;
 
   errorMessage: any;
+
   constructor(private weatherService:WeatherService){}
+  
  fetchWeather(city:string){
   console.log(city);
   
