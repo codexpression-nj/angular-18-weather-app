@@ -49,7 +49,7 @@ export class AppComponent implements OnInit{
   day5Temp!: number;
 
   cityIllustrationPath = "assets/bg1.jpg"
-  sub5: Subscription | undefined;
+  subWeather: Subscription | undefined;
 
   errorMessage: any;
 
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit{
     console.log(err);
     
   })
-  this.sub5 = this.weatherService.getForcast('pretoria').pipe(first()).subscribe((data) => {
+  this.subWeather = this.weatherService.getForcast('pretoria').pipe(first()).subscribe((data) => {
     
     for (let i = 0; i < data.length; i++) {
       const date = new Date(data[i].dt_txt).getDay();

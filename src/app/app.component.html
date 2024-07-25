@@ -95,10 +95,7 @@
 
 <main class="main">
   <div style=" display: flex;
-  justify-content: center;    flex-direction: column;
-
-  align-items: center;width: 70%; box-sizing: inherit; box-sizing: inherit;background-color: #ffffff;border-radius: 2em;">
-
+  justify-content: center;  flex-direction: column;align-items: center;width: 70%; box-sizing: inherit; box-sizing: inherit;background-color: #ffffff;border-radius: 2em;">
     <div class="city-search-header">
       <div class="search-city-input-wrapper">
         <input class="search-city-input" auto-complete-placeholder="search city" placeholder="search city"
@@ -114,8 +111,7 @@
         </button>
       </div>
     </div>
-    <!-- <div *ngIf="{temp}"> -->
-    <div *ngIf="sub5 != null"  class="content">
+    <div *ngIf="subWeather != null"  class="content">
       <!-- <section class="main-weather__card"> -->
         <section class="card-header__container-dark" >
           <div class="header-content__wrapper">
@@ -158,7 +154,7 @@
       <!-- </section>  -->
     </div>
     
-      <section  *ngIf="sub5 != null"  class="forecast__container">
+      <section  *ngIf="subWeather != null"  class="forecast__container">
         <div class="day-weather__container" [ngSwitch]="true">
           <span class="forecast-condition__icon"  class="day-name__text">{{day1Name}}</span>
           <img class="forecast-condition__icon" *ngSwitchCase="day1State === 'Clouds'" src="../assets/cloudy.svg" />
