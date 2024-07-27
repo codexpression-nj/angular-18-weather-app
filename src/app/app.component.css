@@ -152,7 +152,6 @@
     border-radius: 5px;
     height: 1px;
     box-shadow: 0 3rem 0 0 #000000;
-    /* width: 50%; */
   }
   
   .city-name__text {
@@ -173,7 +172,6 @@
     grid-template-columns: 1fr;
     justify-items: center;
     grid-gap: 10rem;
-    /* background-color: red; */
   }
   
   .temp-state__container {
@@ -196,18 +194,6 @@
     text-align: center;
   }
 
-.max__text {
-  color: #FF0070;
-}
-
-.min__text {
-  color: #00FF9B;
-}
-
-.max__text, .min__text {
-  font-size: 1rem;
-  text-align: center;
-}
 
 .max-temperature__text, .min-temperature__text {
   text-align: center;

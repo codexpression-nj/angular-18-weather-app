@@ -25,7 +25,6 @@ export class AppComponent implements OnInit{
   daysForecast: any;
   minTemp:any
   maxTemp:any
-  // cityIllustrationPath: ansy;
 
   day1Name: string | undefined;
   day1State: string | undefined;
@@ -49,7 +48,7 @@ export class AppComponent implements OnInit{
   day5Temp!: number;
 
   cityIllustrationPath = "assets/bg1.jpg"
-  subWeather: Subscription | undefined;
+  subWeather: Subscription = new Subscription;
 
   errorMessage: any;
 
@@ -114,10 +113,11 @@ export class AppComponent implements OnInit{
  }
 
   ngOnInit() {
-    
-   
-
-  }
   
+  }
+  ngOnDestroy() {
+    this.subWeather.unsubscribe();
+  
+  }
 
 }
