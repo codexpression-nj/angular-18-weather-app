@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, first, map, retry } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+import { Observable, first } from 'rxjs';
 import {Subject} from 'rxjs';
 
 @Injectable({
